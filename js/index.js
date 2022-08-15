@@ -1,15 +1,19 @@
+const toVW = (px) => {
+    const percent = $(document).width() > 1000 ? false : true;
+    return percent ? $(document).width() / 100 * (px / 10) : px;
+}
 $(document).ready(() => {
     scrollCallback();
     const start = 500;
     anime({
         targets: '.info > .imgLayer > .goorm-left',
-        translateX: 200,
+        translateX: toVW(200),
         duration: 3000,
         delay: 500 + start
     });
     anime({
         targets: '.info > .imgLayer > .goorm-right',
-        translateX: -200,
+        translateX: toVW(-200),
         duration: 3000,
         delay: 500 + start
     });
@@ -18,7 +22,7 @@ $(document).ready(() => {
         translateY: ["20%", 0],
         translateZ: 0,
         opacity: [0, 1],
-        duration: 5000,
+        duration: 3000,
         delay: 1250 + start
     });
     anime({
@@ -90,7 +94,9 @@ const scrollCallback = () => {
         $('html').css('background', 'rgb(var(--white))');
     }
 };
-$(document).on('scroll', scrollCallback);
+$(document).on('scroll', () => {
+    scrollCallback();
+});
 
 $(document).on('click', '.miri_application', () => {
     Swal.fire({
