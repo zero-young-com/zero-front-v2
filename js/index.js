@@ -1,4 +1,5 @@
 $(document).ready(() => {
+    scrollCallback();
     const start = 500;
     anime({
         targets: '.info > .imgLayer > .goorm-left',
@@ -69,7 +70,7 @@ const ifInWindow = (e) => {
 
 
 let show = new Object();
-$(document).on('scroll', () => {
+const scrollCallback = () => {
     if(ifInWindow('.recommend > div:nth-child(4)').stat){
         const percent = ifInWindow('.recommend > div:nth-child(4)').percent;
         $('.recommend > div:nth-child(4)').css('left', `${60 - (percent * 100)}%`);
@@ -83,15 +84,17 @@ $(document).on('scroll', () => {
         });
     }
     if(ifInWindow('.footer').stat){
-        $('html').css('background', 'var(--footer-black)');
+        $('html').css('background', 'rgb(var(--footer-black))');
     }
     else{
-        $('html').css('background', '#fff');
+        $('html').css('background', 'rgb(var(--white))');
     }
-});
+};
+$(document).on('scroll', scrollCallback);
+
 $(document).on('click', '.miri_application', () => {
     Swal.fire({
-        title: '사전 신청을 위하여<br>이메일/전화번호를 입력 해 주세요!',
+        title: '<div class="alertTitle">사전 신청을 위하여<br>이메일/전화번호를 입력 해 주세요!</div>',
         html: '<div class="alert">"확인" 버튼을 누르면 <a class="alert" href="https://policy.chicken-moo.com/" target="_blank">개인정보처리방침</a>와<br><a href="https://policy.chicken-moo.com/marketing" target="_blank" class="alert">마케팅정보수신</a>에 동의한 것으로 간주됩니다!</div>',
         icon: 'info',
         input: 'text',
