@@ -7,6 +7,12 @@ html{
     padding: 0;
     border: none;
     background-repeat: no-repeat;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+#else{
+    user-select: none;
+    outline: none;
 }
 :root{
     --green: 0, 172, 70;
@@ -14,6 +20,25 @@ html{
     --white: 255, 255, 255;
     --footer-black: 9, 14, 30;
     --px: 1px;
+}
+.arrow{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 70px 0;
+}
+.arrow > .img{
+    background: url(/img/arrow.svg);
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    transform: rotate(0.5turn);
+    cursor: pointer;
 }
 .header{
     background: rgba(var(--white), 0.7);
@@ -75,7 +100,7 @@ html{
     justify-content: center;
     background: rgb(var(--white));
     width: 100%;
-    height: calc(100vh + 60px);
+    height: calc(100vh);
 }
 .info > .text{
     display: flex;

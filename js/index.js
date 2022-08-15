@@ -26,10 +26,25 @@ $(document).ready(() => {
         delay: 1250 + start
     });
     anime({
+        targets: '.arrow',
+        translateY: ["20%", 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        duration: 3000,
+        delay: 1250 + start
+    });
+    anime({
         targets: '.betaReview > .list',        
         opacity: 0,
         duration: 1
     });
+    anime({
+        targets: '.arrow',
+        translateY: -15,
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutCirc'
+      });
 });
 
 const listScroll = anime({
@@ -93,6 +108,12 @@ const scrollCallback = () => {
     else{
         $('html').css('background', 'rgb(var(--white))');
     }
+    if(!ifInWindow('#else > .title').stat && ifInWindow('.info').stat){
+        $('.arrow').css('display', 'flex');
+    }
+    else{
+        $('.arrow').css('display', 'none');
+    }
 };
 $(document).on('scroll', () => {
     scrollCallback();
@@ -142,3 +163,9 @@ const participate = (data) => {
         }
     });
 };
+
+
+$(document).on('click', '.arrow > .img', () => {
+    location.href = "./#else";
+    history.pushState(null, null, './');
+})
