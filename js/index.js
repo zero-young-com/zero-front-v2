@@ -57,7 +57,7 @@ const ifInWindow = (e) => {
     const element = {
         "top": document.querySelector(e).offsetTop,
         "bottom": document.querySelector(e).offsetTop + $(e).height()
-    }
+    };
 
     if(scroll.bottom >= element.top && scroll.top <= element.bottom) return {
         "stat": true,
