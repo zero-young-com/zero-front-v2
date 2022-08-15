@@ -1,0 +1,380 @@
+html{
+    overflow-x: hidden;
+    transition: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-repeat: no-repeat;
+}
+:root{
+    --green: #00AC46;
+    --black: #000;
+    --footer-black: #090E1E;
+}
+.header{
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: saturate(100%) blur(12px);
+    -webkit-backdrop-filter: saturate(100%) blur(12px);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+}
+.header > .left > .logo {
+    background: url(/img/logo-black.svg);
+    width: 38px; height: 38px;
+}
+.header > .right > .miri_application{
+    width: 110px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 12px;
+}
+.header > .left, .header > .center, .header > .right{
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header > .left {
+    justify-content: left;
+    margin-left: 110px;
+}
+.header > .center {
+    justify-content: center;
+}
+.header > .right {
+    justify-content: right;
+    margin-right: 110px;
+}
+.zero-button{
+    background: var(--green);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px var(--green), inset 0px 0px 20px var(--green);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background: #fff;
+    width: 100%;
+    height: 550px;
+}
+.info > .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    z-index: 11;
+    transition: none;
+}
+.info > .text > .madeZERO {
+    display: inline-block;
+}
+.info > .imgLayer{
+    user-select: none;
+    -webkit-user-drag: none;
+    margin: 30px 0 0 0;
+    position: relative;
+    top: 0; left: 40px;
+}
+.info > .imgLayer > .tree {
+    width: 215px;
+    height: 215px;
+    position: relative;
+    top: 0; left: 0;
+    z-index: 10;
+}
+.info > .imgLayer > .goorm-left {
+    width: 186px;
+    height: 106px;
+    position: relative;
+    top: -45px; left: -130px;
+    z-index: 9;
+}
+.info > .imgLayer > .goorm-right {
+    width: 265px;
+    height: 150px;
+    position: relative;
+    top: -69px; left: 115px;
+    z-index: 8;
+}
+.info > .text > .zbyz {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -3%;
+}
+.info > .text > .madeZERO {
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: -3%;
+    display: inline-block;
+}
+.info > .text > .madeZERO > .ZERO {
+    color: var(--green);
+    text-shadow: 0px 0px 2px var(--green);
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: -3%;
+    display: inline-block;
+}
+.info > .text > .startZERO{
+    margin: 28px 0 0 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+.info > .text > .miri_application{
+    margin: 10px 0 0 0;
+    width: 110px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 12px;
+}
+.testPage{
+    width: 100%;
+    height: 1000px;
+    background: #333;
+}
+.footer{
+    background: var(--footer-black);
+    width: 100%;
+    height: 185px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer{
+    color: #fff;
+}
+.footer > .logo {
+    background: url(/img/logo-white.svg);
+    width: 38px; height: 38px;
+}
+.footer > .teamZERO{
+    margin: 0 0 0 30px;
+}
+.footer > .teamZERO > .ZEROteam{
+    font-weight: 700;
+    font-size: 18px;
+}
+.footer > .teamZERO > .major{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 17px;
+}
+.footer > .teamZERO > .juso{
+    margin-top: 1px;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: -3%;
+}
+.footer > .teamZERO > .email{
+    margin-top: 20px;
+}
+.footer > .teamZERO > .email > a{
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: -3%;
+    color: #fff;
+    text-decoration: none;
+}
+.footer > .teamZERO > .phone{
+    margin-top: 1px;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: -3%;
+}
+.footer > .gain {
+    margin: 0 0 0 50px;
+}
+.footer > .gain > .gan{
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: -3%;
+}
+.footer > .copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: end;
+    width: 350px;
+}
+.footer > .copyright > .copy{
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: -3%;
+    text-align: right;
+}
+.hard {
+    background: url(/img/grs.png);
+    height: 231px;
+    width: 100%;
+}
+.hard > .inner{
+    background: rgba(0, 18, 30, 0.5);
+    width: 100%; height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hard > .inner > .hared{
+    font-weight: 700;
+    font-size: 28px;
+}
+.hard > .inner > .miri_application{
+    margin: 20px 0 0 0;
+    width: 110px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 12px;
+}
+.betaReview{
+    background: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+.betaReview > .title{
+    margin: 0 0 15px 0;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 14px;
+}
+.betaReview > .first {
+    font-weight: 600;
+    font-size: 30px;
+}
+.betaReview > .margin{
+    margin: 0 0 40px 0;
+}
+.betaReview > .list > .student{
+    width: 720px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    margin: 0 0 15px 0;
+}
+.betaReview > .list > .student > .iconbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -5px 0 0;
+}
+.betaReview > .list > .student > .iconbox > .icon{
+    width: 30px;
+    height: 30px;
+}
+.betaReview > .list > .student > .iconbox > .girl{
+    background: url(/img/girl.png);
+    background-size: cover;
+}
+.betaReview > .list >  .student > .content {
+    margin: 0 0 0 20px;
+}
+.betaReview > .list >  .student > .content > .name{
+    font-weight: 600;
+    font-size: 16px;
+    color: #bdbdbd;
+}
+.betaReview > .list >  .student > .content > .what{
+    font-weight: 500;
+    font-size: 16px;
+    word-break: keep-all;
+    margin: 5px 0 0 0;
+}
+.recommend{
+    background: #f8f8f8;
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.recommend > .title{
+    margin: 0 0 15px 0;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 14px;
+}
+.recommend > .first {
+    font-weight: 600;
+    font-size: 30px;
+}
+.recommend > .list{
+    transition: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: 0;
+    left: 60%;
+}
+.recommend > .margin{
+    margin: 0 0 40px 0;
+}
+.recommend > .list > .box{
+    margin: 0 10px;
+    width: 253px;
+    height: 145px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.recommend > .list > .box > .emoti {
+    font-size: 32px;
+    margin: 0 0 5px 0;
+}
+.recommend > .list > .box > .content{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    word-break: keep-all;
+    width: 100%;
+    text-align: center;
+}
+.alert{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
