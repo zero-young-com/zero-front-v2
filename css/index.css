@@ -9,12 +9,13 @@ html{
     background-repeat: no-repeat;
 }
 :root{
-    --green: #00AC46;
-    --black: #000;
-    --footer-black: #090E1E;
+    --green: 0, 172, 70;
+    --black: 0, 0, 0;
+    --white: 255, 255, 255;
+    --footer-black: 9, 14, 30;
 }
 .header{
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(var(--white), 0.7);
     backdrop-filter: saturate(100%) blur(12px);
     -webkit-backdrop-filter: saturate(100%) blur(12px);
     width: 100%;
@@ -55,11 +56,11 @@ html{
     margin-right: 110px;
 }
 .zero-button{
-    background: var(--green);
+    background: rgb(var(--green));
     color: #fff;
     font-size: 15px;
     border-radius: 6px;
-    box-shadow: 0px 0px 3px var(--green), inset 0px 0px 20px var(--green);
+    box-shadow: 0px 0px 3px rgb(var(--green)), inset 0px 0px 20px rgb(var(--green));
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,7 +72,7 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    background: #fff;
+    background: rgb(var(--white));
     width: 100%;
     height: 550px;
 }
@@ -126,8 +127,8 @@ html{
     display: inline-block;
 }
 .info > .text > .madeZERO > .ZERO {
-    color: var(--green);
-    text-shadow: 0px 0px 2px var(--green);
+    color: rgb(var(--green));
+    text-shadow: 0px 0px 2px rgb(var(--green));
     font-weight: 800;
     font-size: 40px;
     letter-spacing: -3%;
@@ -152,7 +153,7 @@ html{
     background: #333;
 }
 .footer{
-    background: var(--footer-black);
+    background: rgb(var(--footer-black));
     width: 100%;
     height: 185px;
     padding: 30px 0;
@@ -192,7 +193,7 @@ html{
     font-weight: 300;
     font-size: 14px;
     letter-spacing: -3%;
-    color: #fff;
+    color: rgb(var(--white));
     text-decoration: none;
 }
 .footer > .teamZERO > .phone{
@@ -259,7 +260,7 @@ html{
 }
 .betaReview > .title{
     margin: 0 0 15px 0;
-    color: var(--green);
+    color: rgb(var(--green));
     font-weight: 700;
     font-size: 14px;
 }
@@ -273,8 +274,8 @@ html{
 .betaReview > .list > .student{
     width: 720px;
 
-    background: #FFFFFF;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    background: rgb(var(--white));
+    box-shadow: 0px 1px 4px rgba(var(--black), 0.25);
     border-radius: 10px;
 
     display: flex;
@@ -326,7 +327,7 @@ html{
 }
 .recommend > .title{
     margin: 0 0 15px 0;
-    color: var(--green);
+    color: rgb(var(--green));
     font-weight: 700;
     font-size: 14px;
 }
@@ -353,8 +354,8 @@ html{
     margin: 0 10px;
     width: 253px;
     height: 145px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    background: rgb(var(--white));
+    box-shadow: 0px 1px 2px rgba(var(--black), 0.25);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -376,5 +377,5 @@ html{
 .alert{
     font-size: 15px;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(var(--black), 0.3);
 }
