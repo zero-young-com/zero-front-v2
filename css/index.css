@@ -57,7 +57,7 @@ html{
 }
 .zero-button{
     background: rgb(var(--green));
-    color: #fff;
+    color: rgb(var(--white));
     font-size: 15px;
     border-radius: 6px;
     box-shadow: 0px 0px 3px rgb(var(--green)), inset 0px 0px 20px rgb(var(--green));
@@ -162,7 +162,7 @@ html{
     justify-content: center;
 }
 .footer{
-    color: #fff;
+    color: rgb(var(--white));
 }
 .footer > .logo {
     background: url(/img/logo-white.svg);
@@ -231,7 +231,7 @@ html{
 .hard > .inner{
     background: rgba(0, 18, 30, 0.5);
     width: 100%; height: 100%;
-    color: #fff;
+    color: rgb(var(--white));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,7 +250,7 @@ html{
     line-height: 12px;
 }
 .betaReview{
-    background: #fff;
+    background: rgb(var(--white));
     width: 100%;
     display: flex;
     flex-direction: column;
