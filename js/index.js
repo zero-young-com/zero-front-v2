@@ -86,7 +86,9 @@ const ifInWindow = (e) => {
         "stat": false
     };
 };
-
+const scroll = (e, add = 0) => {
+    $(this).scrollTop(document.querySelector(e).offsetTop + add);
+}
 
 let show = new Object();
 const scrollCallback = () => {
@@ -98,7 +100,7 @@ const scrollCallback = () => {
         show['.betaReview > .list'] = true;
         anime({
             targets: '.betaReview > .list',        
-            opacity: ['0', '1'],
+            opacity: [0, 1],
             duration: 1000
         });
     }
@@ -108,11 +110,26 @@ const scrollCallback = () => {
     else{
         $('html').css('background', 'rgb(var(--white))');
     }
+
     if(!ifInWindow('#else > .title').stat && ifInWindow('.info').stat){
         $('.arrow').css('display', 'flex');
+        show['header'] = false;
+        $('.header').css('display', 'none');
+        anime({
+            targets: '.header',        
+            translateY: "-100%",
+            duration: 100
+        });
     }
-    else{
+    else if(!show['header']){
+        show['header'] = true;
         $('.arrow').css('display', 'none');
+        $('.header').css('display', 'flex');
+        anime({
+            targets: '.header',        
+            translateY: 0,
+            duration: 100
+        });
     }
 };
 $(document).on('scroll', () => {
@@ -166,6 +183,5 @@ const participate = (data) => {
 
 
 $(document).on('click', '.arrow > .img', () => {
-    location.href = "./#else";
-    history.pushState(null, null, './');
+    scroll('#else', -60);
 })
