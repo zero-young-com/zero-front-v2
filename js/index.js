@@ -40,7 +40,7 @@ $(document).ready(() => {
     });
     anime({
         targets: '.arrow',
-        translateY: -15,
+        translateY: 30,
         direction: 'alternate',
         loop: true,
         easing: 'easeInOutCirc'
