@@ -94,7 +94,7 @@ let show = new Object();
 const scrollCallback = () => {
     if(ifInWindow('.recommend > div:nth-child(4)').stat){
         const percent = ifInWindow('.recommend > div:nth-child(4)').percent;
-        $('.recommend > div:nth-child(4)').css('left', `${60 - (percent * 100)}%`);
+        $('.recommend > div:nth-child(4)').css('left', `${57.5 - (percent * 100)}%`);
     }
     if(ifInWindow('.betaReview > .list').percent > 0.45 && !show['.betaReview > .list']){
         show['.betaReview > .list'] = true;
