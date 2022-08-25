@@ -87,7 +87,7 @@ const ifInWindow = (e) => {
     };
 };
 const scroll = (e, add = 0) => {
-    $(this).scrollTop(document.querySelector(e).offsetTop + add);
+    $(this).scrollTop(document.querySelector(e).offsetTop - add);
 }
 
 let show = new Object();
@@ -183,5 +183,5 @@ const participate = (data) => {
 
 
 $(document).on('click', '.arrow > .img', () => {
-    scroll('#else', -60);
+    scroll('#else', $('.header').height());
 })
